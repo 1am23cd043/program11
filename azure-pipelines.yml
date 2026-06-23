@@ -7,7 +7,7 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'Program11/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
@@ -18,7 +18,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/target'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/Program11/target'
     Contents: '*.jar'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
